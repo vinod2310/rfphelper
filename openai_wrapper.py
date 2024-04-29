@@ -32,5 +32,5 @@ class OpenAIWrapper:
         self.retrieval_chain = create_retrieval_chain(retriever, self.document_chain)
 
     def ask(self, question):
-        response = self.retrieval_chain.invoke({"input": "Does RSA support SSO with social identity?"})
+        response = self.retrieval_chain.invoke({"input": question})
         return response["answer"]
